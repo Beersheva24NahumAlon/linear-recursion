@@ -57,5 +57,14 @@ public class RecursionMethodsTest {
     void isSubstringTest() {
         assertTrue(isSubstring("Hello world", "llo "));
         assertFalse(isSubstring("Hello world", " llo"));
+        assertFalse(isSubstring("Hello world", "p"));
+        assertTrue(isSubstring("Hello world", "Hello world"));
+        assertTrue(isSubstring("Hello world", "o"));
+    }
+
+    @Test
+    void compareStringsTest() {
+        assertTrue(compareStrings("llo jhjh", "llo "));
+        assertFalse(compareStrings("llo hghgh", "lloo"));
     }
 }
