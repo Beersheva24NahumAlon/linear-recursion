@@ -63,8 +63,8 @@ public class RecursionMethodsTest {
     }
 
     @Test
-    void compareStringsTest() {
-        assertTrue(compareStrings("llo jhjh", "llo "));
-        assertFalse(compareStrings("llo hghgh", "lloo"));
+    void isFirstSubstringTest() {
+        assertTrue(isFirstSubstring("llo jhjh", "llo "));
+        assertFalse(isFirstSubstring("llo hghgh", "llooh"));
     }
 }

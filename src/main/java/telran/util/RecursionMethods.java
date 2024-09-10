@@ -41,10 +41,10 @@ public class RecursionMethods {
     }
 
     public static boolean isSubstring(String string, String subString) {
-        return string.length() < subString.length() ? false : compareStrings(string, subString) || isSubstring(string.substring(1), subString);
+        return string.length() < subString.length() ? false : isFirstSubstring(string, subString) || isSubstring(string.substring(1), subString);
     }
 
-    public static boolean compareStrings(String string1, String string2) {
-        return string2.length() == 0 ? true : string1.charAt(0) == string2.charAt(0) && compareStrings(string1.substring(1), string2.substring(1)); 
+    public static boolean isFirstSubstring(String string1, String string2) {
+        return string2.length() == 0 ? true : string1.charAt(0) == string2.charAt(0) && isFirstSubstring(string1.substring(1), string2.substring(1)); 
     }
 }
